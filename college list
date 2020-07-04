@@ -23,9 +23,8 @@ for r in tr:
     div_list=browser.find_elements_by_tag_name('div')
     for d in div_list:
         if d.get_attribute('class')=='container mt-3':
-            li_list=d.find_elements_by_tag_name('li')
-            for l in li_list:
-                print(l.text)
+                print(d.text)
+                print('----------------------------------------------------------------------------------------------------------------------------')
     browser.switch_to.window(handle)
 
 browser.quit()
